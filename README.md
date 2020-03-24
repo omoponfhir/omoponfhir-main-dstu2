@@ -1,8 +1,7 @@
 OMOPonFHIR Implementation version 1
 =
 - Supports OMOP v5
-- Supports STU3
-- [WIP] Supports DSTU2 -- currently work in progress. omoponfhir-dstu2-server/ is just copy of omoponfhir-stu3-server. When it's completed, pom and dockerfile will include this directory.
+- Supports DSTU2
 
 Database Dependencies
 -
@@ -13,7 +12,7 @@ Please follow the instruction in README. This database contains couple of sample
 How to install and run.
 -
 To download,
-git clone --recurse https://github.com/omoponfhir/omoponfhir-main.git
+git clone --recurse https://github.com/omoponfhir/omoponfhir-main-dstu2.git
 
 Before running the application update the values of the JDBC_URL, JDBC_USERNAME, and JDBC_PASSWORD environment variables in the Dockerfile. They must contain the data necessary for your application to connect to an OMOP V5 database. After updating the ENV variables in the Dockerfile, you can do either
 
@@ -24,8 +23,8 @@ sudo docker-compose up --build -d
 
 2. or use docker build and run
 ```
-sudo docker build -t omoponfhir .
-sudo docker run --name omoponfhir -p 8080:8080 -d omoponfhir:latest
+sudo docker build -t omoponfhir-dstu2 .
+sudo docker run --name omoponfhir-dstu2 -p 8080:8080 -d omoponfhir-dstu2:latest
 ```
 
 NOTE: The OMOPonFHIR server is set to READ-ONLY. If you want to write to OMOPonFHIR, web.xml in WEB-INFO must have readOnly set to False.
@@ -49,9 +48,9 @@ Environment variables are required to be set in order for OMOPonFHIR server to r
 
 Application URLs
 -
-- TestPage UI - http://<my_host>:8080/omoponfhir-stu3/
-- API - http://<my_host>:8080/omoponfhir-stu3/fhir
-- SMART on FHIR - http://<my_host>:8080/omoponfhir-stu3/smart/
+- TestPage UI - http://<my_host>:8080/omoponfhir2/
+- API - http://<my_host>:8080/omoponfhir2/fhir
+- SMART on FHIR - http://<my_host>:8080/omoponfhir2/smart/
 
 Additional Information
 -
@@ -59,6 +58,7 @@ Status: Details available in http://omoponfhir.org/
 
 Contributors:
 - Lead: Myung Choi
+- DSTU2 to OMOPv5 Mapping: Saul Crumpton
 - DevOp/Deployment: Eric Soto
 - Docker/VM Management: Michael Riley
  
