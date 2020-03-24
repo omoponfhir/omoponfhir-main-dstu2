@@ -4,3 +4,6 @@
 [submodule "omoponfhir-omopv5-dstu2-mapping"]
 	path = omoponfhir-omopv5-dstu2-mapping
 	url = https://github.com/omoponfhir/omoponfhir-omopv5-dstu2-mapping
+[submodule "omoponfhir-omopv5-jpabase"]
+	path = omoponfhir-omopv5-jpabase
+	url = https://github.com/omoponfhir/omoponfhir-omopv5-jpabase
