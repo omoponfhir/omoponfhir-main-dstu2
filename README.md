@@ -2,6 +2,7 @@ OMOPonFHIR Implementation version 1
 =
 - Supports OMOP v5
 - Supports DSTU2
+- STU3: STU3 is available from https://github.com/omoponfhir/omoponfhir-main/ 
 
 Database Dependencies
 -
