@@ -16,7 +16,7 @@ This application requires an OMOP V5.2 database to work. Please do the follows t
 7. Run DDLs for omoponfhir_v5.2_f_observation_view_ddl.txt and omoponfhir_v5.3_f_person_ddl.txt
 8. Load vocabularies downloaded from Athena.
 9. Load dataset.
-10. Use fhir_names/ folder load f_person with synthetic names
+10. Use fhir_names/ folder to populate f_person with synthetic names
 11. Index all IDs in OMOP tables
 
 How to install and run.
