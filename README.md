@@ -1,14 +1,23 @@
 OMOPonFHIR Implementation version 1
 =
-- Supports OMOP v5
+- Supports OMOP v5.2
 - Supports DSTU2
 - STU3: STU3 is available from https://github.com/omoponfhir/omoponfhir-main/ 
 
 Database Dependencies
 -
-This application requires an OMOP V5 database to work. You can use the database here: https://github.com/omoponfhir/omopv5fhir-pgsql/ 
-
-Please follow the instruction in README. This database contains couple of sample synthetic patients.
+This application requires an OMOP V5.2 database to work. Please do the follows to set up your database.
+1. Goto Athena.ohdsi.org to download Vocabularies.
+2. Get v5.2 DDLs from https://github.com/OHDSI/CommonDataModel/tree/v5.2.2
+3. Get docker image of PostgreSQL: docker pull postgres
+4. Run docker run --name omopv52 -p 5432:5432 -e POSTGRES_PASSWORD=<password> -d postgres
+5. Create database and schema
+6. Run DDL from ODHSI
+7. Run DDLs for f_observation_view and f_person
+8. Load vocabularies downloaded from Athena.
+9. Load dataset.
+10. Use fhir_names/ folder load f_person with synthetic names
+11. Index all IDs in OMOP tables
 
 How to install and run.
 -
