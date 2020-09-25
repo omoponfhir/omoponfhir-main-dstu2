@@ -1,7 +1,3 @@
-[submodule "omoponfhir-main-dstu2"]
-	path = omoponfhir-main-dstu2
-	url = https://github.com/omoponfhir/omoponfhir-main-dstu2.git
-	branch = master
 [submodule "omoponfhir-omopv5-dstu2-mapping"]
 	path = omoponfhir-omopv5-dstu2-mapping
 	url = https://github.com/omoponfhir/omoponfhir-omopv5-dstu2-mapping.git
