@@ -13,7 +13,7 @@ This application requires an OMOP V5.2 database to work. Please do the follows t
 4. Run docker run --name omopv52 -p 5432:5432 -e POSTGRES_PASSWORD=<password> -d postgres
 5. Create database and schema
 6. Run DDL from ODHSI
-7. Run DDLs for f_observation_view and f_person
+7. Run DDLs for omoponfhir_v5.2_f_observation_view_ddl.txt and omoponfhir_v5.3_f_person_ddl.txt
 8. Load vocabularies downloaded from Athena.
 9. Load dataset.
 10. Use fhir_names/ folder load f_person with synthetic names
