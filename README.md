@@ -7,7 +7,7 @@ OMOPonFHIR Implementation version 1
 Database Dependencies
 -
 This application requires an OMOP V5.2 database to work. Please do the follows to set up your database.
-1. Goto Athena.ohdsi.org to download Vocabularies.
+1. Goto https://athena.ohdsi.org to download Vocabularies.
 2. Get v5.2 DDLs from https://github.com/OHDSI/CommonDataModel/tree/v5.2.2
 3. Get docker image of PostgreSQL: docker pull postgres
 4. Run docker run --name omopv52 -p 5432:5432 -e POSTGRES_PASSWORD=<password> -d postgres
