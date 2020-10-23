@@ -1,12 +1,12 @@
 [submodule "omoponfhir-omopv5-dstu2-mapping"]
 	path = omoponfhir-omopv5-dstu2-mapping
 	url = https://github.com/omoponfhir/omoponfhir-omopv5-dstu2-mapping.git
-	branch = omopv5.2
+	branch = master
 [submodule "omoponfhir-omopv5-jpabase"]
 	path = omoponfhir-omopv5-jpabase
 	url = https://github.com/omoponfhir/omoponfhir-omopv5-jpabase.git
-	branch = OMOP-v5.2
+	branch = master
 [submodule "omoponfhir-dstu2-server"]
 	path = omoponfhir-dstu2-server
 	url = https://github.com/omoponfhir/omoponfhir-dstu2-server.git
-	branch = master
+	branch = omopv5.3.1
