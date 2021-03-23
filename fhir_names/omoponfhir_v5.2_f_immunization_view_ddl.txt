@@ -13,7 +13,6 @@ create view f_immunization_view
              quantity,
              immunization_note)
 as
-
 SELECT d.drug_exposure_id              AS immunization_id,
        d.person_id,
        d.drug_concept_id               AS immunization_concept_id,
@@ -32,7 +31,8 @@ JOIN concept c on d.drug_concept_id = c.concept_id
 WHERE (c.vocabulary_id in ('NDC','RxNorm','CPT4','HCPCS')
                 AND c.concept_class_id not in ('CPT4 Modifier','CPT4 Hierarchy','HCPCS Class','HCPCS Modifier', 'Place of Service')
                 AND (
-                    lower(c.concept_name) like ('%vacc%') OR
+                    lower(c.concept_name) like ('%vaccine%') OR
+                    lower(c.concept_name) like ('%vaccination%') OR
                     lower(c.concept_name) like ('%immuniz%') OR
                     lower(c.concept_name) like ('%toxoid%')
                     )
@@ -57,7 +57,8 @@ JOIN concept c on p.procedure_concept_id = c.concept_id
 WHERE (c.vocabulary_id in ('NDC','RxNorm','CPT4','HCPCS')
                 AND c.concept_class_id not in ('CPT4 Modifier','CPT4 Hierarchy','HCPCS Class','HCPCS Modifier', 'Place of Service')
                 AND (
-                    lower(c.concept_name) like ('%vacc%') OR
+                    lower(c.concept_name) like ('%vaccine%') OR
+                    lower(c.concept_name) like ('%vaccination%') OR
                     lower(c.concept_name) like ('%immuniz%') OR
                     lower(c.concept_name) like ('%toxoid%')
                     )
